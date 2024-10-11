@@ -1,1 +1,1 @@
-# 1724_Course-Project
+# 1724_CourseProject
