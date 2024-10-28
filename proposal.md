@@ -28,20 +28,20 @@ This task will focus on implementing authentication mechanisms and presence dete
 
 1. **Authentication System**
 
-    To ensure secure access to chat rooms and provide users with personalized sessions, we will implement a lightweighted authentication system. This system will allow users to register, log in, log out, and maintain authenticated sessions throughout their interaction with the chat application.
-</br>
+    To ensure secure access to chat rooms and provide users with personalized sessions, we will implement a lightweighted authentication system. This system will     allow users to register, log in, log out, and maintain authenticated sessions throughout their interaction with the chat application.
+
     * **User Registration**
 
-        New users will register by creating a unique username and password, which will be stored in a secure format within the system(e.g. hash map). The registration process will validate the uniqueness of usernames, preventing duplicates and ensuring each user has an individual identity within the application.
-    </br>
+        New users will register by creating a unique username and password, which will be stored in a secure format within the system(e.g. hash map). The                   registration     process will validate the uniqueness of usernames, preventing duplicates and ensuring each user has an individual identity within the              application.
+
     * **User Login and Session Management**
 
         Once registered, users can log in using their chosen username and password. After successful authentication, the system will generate a session token that will be stored server-side and associated with the user's session. This token-based approach will allow users to maintain authenticated as they interact with the chat app.
-    </br>
+
     * **Logout Functionality**
 
         Users will have a logout option, which will invalidate their session token and end their authenticated session. This process will clear any authentication data tied to the user. Once the session token is removed, any following access attempts will require re-authentication, safeguarding the app from unauthorized access.
-    </br>
+
 2. **Presence Detection**
 
     Presence detection will be implemented by monitoring users' login and logout events. When a user logs in, they will be marked as "onnine" in the system; when they log out, their status will update to "offline". For additional reliability, we will do periodic session checks to ensure users who may have lost connection are correctly marked offline after a timeout. The users' "offline" status will invalidate their session token and end their authenticated session.
