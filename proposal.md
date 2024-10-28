@@ -1,6 +1,6 @@
 # Real Time Chat Application
 
-#### Chujing YU, Minghao Ma, Yiyang Liu
+#### Chujing Yu, Minghao Ma, Yiyang Liu
 
 ## Motivation
 
