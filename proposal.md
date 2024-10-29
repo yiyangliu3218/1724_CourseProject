@@ -82,7 +82,7 @@ This task will focus on implementing authentication mechanisms and presence dete
 
 2. **Presence Detection**
 
-    Presence detection will be implemented by monitoring users' login and logout events. When a user logs in, they will be marked as "onnine" in the system; when they log out, their status will update to "offline". For additional reliability, we will do periodic session checks to ensure users who may have lost connection are correctly marked offline after a timeout. The users' "offline" status will invalidate their session token and end their authenticated session.
+    Presence detection will be implemented by monitoring users' login and logout events. When a user logs in, they will be marked as "online" in the system; when they log out, their status will update to "offline". For additional reliability, we will do periodic session checks to ensure users who may have lost connection are correctly marked offline after a timeout. The users' "offline" status will invalidate their session token and end their authenticated session.
 
 ### 4. Frontend Development
 
