@@ -16,9 +16,29 @@ This project is motivated by our desire to leverage Rust's strengths to create a
 
 ### 1. Real-time messaging using WebSockets
 
+This task will focus on supporting Real-time messaging using WebSockets
+
 1. **WebSocket Integration**
 
+    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. After a user joins a created room, it should have established a connection with the server through websocket protocol. With the help of Rust-Websocket, we hope that the functions below can be implemented to support the real-time messaging.
+
+    * **Message reseiving and sending**
+  
+      The server should be able to receive messages from a user, and send them to other users in the same room. In other cases, such as one new user join the room, the server will also send messages off its own bat to inform other users in the same room. To implement these tasks, the websocket server should route according to the chat room ID, and maintains a user list for each chat room. When a user join or leave a chat room, the user list should be updated.
+
+     * **Dealing with connections**
+      
+        The Rust-Websocket crate has both async and sync implementations of websockets. The synchronous features are useful in real-time messaging, since each connection can be an independent asynchronous task, which can avoid thread competition and blocking. Besides, Rust's asynchronous and concurrent features make it easy to handle a large number of concurrent WebSocket connections. Libraries like tokio and async-std can be used to implement these features.
+
 2. **Scalability Considerations**
+
+    * **Message storage**
+  
+       The messages sent by users will be stored in certain data structure in the server. They will be divided by which room they are from, and maintain the order in which they were sent. If a user enters or re-enters an existing chat room, the previous messages in the room will be retrieved. However, since we are not going to set an SQL database for now, the total size of stored messages should be limited, and every chat room will be allocated a limited storage space for the previous messages. After a chat room is deleted, the messages in this room will be deleted too.
+
+     * **Error handle**
+  
+       Errors are inevitable in a real-time chat application. For example, a user may fail to receive message in a chat room because of the poor network connection. In this case, the websocket server will try to resend message to this user, and check the presence state if the resending is still failed. Other errors like an incorrect message format should also be processed properly.
 
 ### 2. Chat room creation and joining
 
