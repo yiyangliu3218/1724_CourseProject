@@ -12,6 +12,16 @@ This project is motivated by our desire to leverage Rust's strengths to create a
 
 ## Objective and key features
 
+In this project, we aim to complete a Rust based real-time chat application. It is considered to have the following functions and features:
+
+* Every user can register for an account and log in to the application with his/her account. When they successfully log in or log out, their online state will be updated. This requires a user authentication and presence detection system.
+* Users can create or join a chat room. A user can enroll in multiple chat rooms at the same time. This requires to set an HTTP server, which can receive requests from users, and manage the chat room according to the requests.
+* People can send text message in the chat room, which can be seen by each other. This requires a WebSocket server which is responsible for the connection management, real-time message transmission, message filtering and other basic tasks.
+* Besides, we hope that the chat application should be robust and safe, which means it can handle high concurrency scenarios and defend against some basic attacks. This is a meaningful practice to make use of Rust's advantages, such as memory safety, and high concurrency support. 
+
+The team responsibility is showed in the end of the proposal, which clarified the responsibilities of each member's tasks.
+
+
 ## Tentative plan
 
 ### 1. Real-time messaging using WebSockets
