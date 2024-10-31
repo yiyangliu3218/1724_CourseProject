@@ -64,7 +64,7 @@ This part is to provide users with the ability to create new chat rooms and join
 
 3. **Error Handling**
 
-    Error handling should include chat room ID validation, where the system returns an error if a user attempts to join a non-existent chat room. If a chat room is full or restricted, the system will also provide appropriate feedback. When a user leaves a chat room, they are automatically removed from the user list. Also,  the system should detect users who have been unresponsive for a long time and mark them as offline.
+    Error handling should include chat room ID validation, where the system returns an error if a user attempts to join a non-existent chat room. If a chat room is full or restricted, the system will also provide appropriate feedback. When a user leaves a chat room, they are automatically removed from the user list. 
 
 4. **Scalability Considerations**
 
