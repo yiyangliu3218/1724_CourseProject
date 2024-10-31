@@ -30,7 +30,7 @@ This task will focus on supporting Real-time messaging using WebSockets
 
 1. **WebSocket Integration**
 
-    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. When a user log in, the client tries to establish a connection with the server through websocket protocol. If the connection is established, the client and the server can communicate with each other.
+    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. Once the client file is executed, the client tries to establish a connection with the server through websocket protocol. If the connection is established, the client and the server can communicate with each other.
    
     * **Message reseiving**
   
