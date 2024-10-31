@@ -30,7 +30,7 @@ This task will focus on supporting Real-time messaging using WebSockets
 
 1. **WebSocket Integration**
 
-    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. After a user log in, the client should have established a connection with the server through websocket protocol.
+    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. When a user log in, the client tries to establish a connection with the server through websocket protocol. If the connection is established, the client and the server can communicate with each other.
    
     * **Message reseiving**
   
@@ -47,7 +47,7 @@ This task will focus on supporting Real-time messaging using WebSockets
 3. **Scalability Considerations**
 
     * **concurrent situation**
-    The Rust-Websocket crate has both async and sync implementations of websockets. The synchronous features are useful in real-time messaging, since each connection can be an independent asynchronous task, which can avoid thread competition and blocking. The HttpServer in Actix automatically starts a number of HTTP workers, each worker thread processes its requests sequentially, and the number of worker threads can be overridden. With the help of these features, the chat application can handle the concurrent situation, and multiple users sending messages at the same time is acceptable.
+    The Rust-Websocket crate has both async and sync implementations of websockets. The asynchronous features are useful in real-time messaging, since each connection can be an independent asynchronous task, which can avoid thread competition and blocking. The HttpServer in Actix automatically starts a number of HTTP workers, each worker thread processes its requests sequentially, and the number of worker threads can be overridden. With the help of these features, the chat application can handle the concurrent situation, and multiple users sending messages at the same time is acceptable.
 
 ### 2. Chat room creation and joining
 
