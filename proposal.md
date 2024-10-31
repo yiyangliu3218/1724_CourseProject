@@ -30,25 +30,24 @@ This task will focus on supporting Real-time messaging using WebSockets
 
 1. **WebSocket Integration**
 
-    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. After a user joins a created room, it should have established a connection with the server through websocket protocol. With the help of Rust-Websocket, we hope that the functions below can be implemented to support the real-time messaging.
-
-    * **Message reseiving and sending**
+    To make Real-time communication possible, we will exploit Rust-Websocket to implement the websocket server, and use Actix Web to implement the HTTP server. After a user log in, the client should have established a connection with the server through websocket protocol.
+   
+    * **Message reseiving**
   
-      The server should be able to receive messages from a user, and send them to other users in the same room. In other cases, such as one new user join the room, the server will also send messages off its own bat to inform other users in the same room. To implement these tasks, the websocket server should route according to the chat room ID, and maintains a user list for each chat room. When a user join or leave a chat room, the user list should be updated.
+      The server should be able to receive messages from a user. To help the server decide what to do with the message, we need to define a "Message" struct. It should contain the plain text, the client's id, and which chat room it comes from. We can define the struct by ourselves or using the existing struct provided by Rust-Websocket. The HttpServer type in Actix-Web can be exploited to serve HTTP requests. The keep-alive function will be used, which lets Actix Web keep connections open to wait for subsequent requests.
 
-     * **Dealing with connections**
+     * **Message processing**
       
-        The Rust-Websocket crate has both async and sync implementations of websockets. The synchronous features are useful in real-time messaging, since each connection can be an independent asynchronous task, which can avoid thread competition and blocking. Besides, Rust's asynchronous and concurrent features make it easy to handle a large number of concurrent WebSocket connections. Libraries like tokio and async-std can be used to implement these features.
+       Once the server receives the message, it should judge that which type of message it belongs to. Is it a command to join/create a chat room, or just a message text? We will regulate that all command messages should begin with ‘/’. If the server receives a command message, a match sentence will be used to find out which type it belongs to, and execute the command.
 
-2. **Scalability Considerations**
+    * **Message sending**
+      
+      After the server receives text messages from a user, it should send them to other users in the same room. In other cases, such as one new user join the room, the server will also send messages off its own bat to inform other users in the same room. To implement these tasks, the websocket server should route according to the chat room ID. The Addr object of Actix-Web will be used, which provides different ways of sending the message.
 
-    * **Message storage**
-  
-       The messages sent by users will be stored in certain data structure in the server. They will be divided by which room they are from, and maintain the order in which they were sent. If a user enters or re-enters an existing chat room, the previous messages in the room will be retrieved. However, since we are not going to set an SQL database for now, the total size of stored messages should be limited, and every chat room will be allocated a limited storage space for the previous messages. After a chat room is deleted, the messages in this room will be deleted too.
+3. **Scalability Considerations**
 
-     * **Error handle**
-  
-       Errors are inevitable in a real-time chat application. For example, a user may fail to receive message in a chat room because of the poor network connection. In this case, the websocket server will try to resend message to this user, and check the presence state if the resending is still failed. Other errors like an incorrect message format should also be processed properly.
+    * **concurrent situation**
+    The Rust-Websocket crate has both async and sync implementations of websockets. The synchronous features are useful in real-time messaging, since each connection can be an independent asynchronous task, which can avoid thread competition and blocking. The HttpServer in Actix automatically starts a number of HTTP workers, each worker thread processes its requests sequentially, and the number of worker threads can be overridden. With the help of these features, the chat application can handle the concurrent situation, and multiple users sending messages at the same time is acceptable.
 
 ### 2. Chat room creation and joining
 
