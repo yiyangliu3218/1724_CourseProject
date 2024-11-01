@@ -33,7 +33,7 @@ This task involves setting up the WebSocket server for real-time messaging.
 
 1. **WebSocket Connection Establishment**
 
-    The server and user client files will be run to set up an initial WebSocket connection.This initial connection will enable the server to handle basic commands, like login and registration, over an established connection. User Authentication via Commands: Once the connection is established, users will send commands to either log in or register, using the connected WebSocket. This approach allows for flexibility, as commands like /login or /register can be handled by the server to authenticate users.
+    The server and user files will be run to set up an initial WebSocket connection.This initial connection will enable the server to handle basic commands, like login and registration, over an established connection. User Authentication via Commands: Once the connection is established, users will send commands to either log in or register, using the connected WebSocket. This approach allows for flexibility, as commands like /login or /register can be handled by the server to authenticate users.
 
 2. **Message Handling**
    
