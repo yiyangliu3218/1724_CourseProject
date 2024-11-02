@@ -61,7 +61,7 @@ This module provides users with the ability to create new chat rooms and join ex
 
 1. **Feature Design**
 
-    To create a chat room, users can initiate a request, and the system will assign a unique ID to each new room, allowing others to join by entering this ID. When a chat room is created, the system can initialize a user list. For joining, users can enter the chat room ID to join an existing room. Upon successfully joining, the system will update the user list by adding the new user and establishing a WebSocket connection to facilitate message exchange. If the user joins an already active chat room, the system can load previous messages to provide context.
+    To create a chat room, users can initiate a request, and the system will assign a unique ID to each new room, allowing others to join by entering this ID. When a chat room is created, the system can initialize a user list. For joining, users can enter the chat room ID to join an existing room. Upon successfully joining, the system will update the user list by adding the new user and establishing a WebSocket connection to facilitate message exchange. If the user joins an already active chat room, the system can load the list of existing users' IDs.
 
 
 2. **Technical Implementation**
@@ -72,9 +72,6 @@ This module provides users with the ability to create new chat rooms and join ex
 
     Error handling should include chat room ID validation, where the system returns an error if a user attempts to join a non-existent chat room. If a chat room is full or restricted, the system will also provide appropriate feedback. When a user leaves a chat room, they are automatically removed from the user list.
 
-4. **Scalability Considerations**
-
-    To ensure efficient resource use, the application will rely on Rust’s asynchronous capabilities and optimized memory management to handle high concurrency smoothly, without needing extra memory constraints. （delete or not）
 
 ### 3. User Authentication and Presence Detection
 
