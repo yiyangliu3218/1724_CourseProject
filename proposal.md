@@ -1,6 +1,7 @@
 # Real Time Chat Application
+# ECE1724 Project Proposal
 
-#### Chujing Yu, Minghao Ma, Yiyang Liu
+#### Chujing Yu 1010809608, Minghao Ma 1011818428, Yiyang Liu 1011770512
 
 ## Motivation
 
