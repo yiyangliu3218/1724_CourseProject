@@ -1,7 +1,7 @@
 # 1724_CourseProject
 ### Commands from the User
 
-* `login <use ID> <password>` : Log into the server
+* `login <use ID> <password>` : Log into the user account
 * `logout`: Exit the user account
 * `checkstatus <user ID>` : Presence detection to show the online\offline status with the given user id
 * `createchatroom <room ID> <room capacity>` : Create a new char room with specific capacity and join it
