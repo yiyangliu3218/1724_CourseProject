@@ -1,6 +1,7 @@
 # 1724_CourseProject
 ### Commands from the User
 
+* `register <use ID> <password>` : Register a new user account
 * `login <use ID> <password>` : Log into the user account
 * `logout`: Exit the user account
 * `checkstatus <user ID>` : Presence detection to show the online\offline status with the given user id
