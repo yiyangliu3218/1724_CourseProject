@@ -2,7 +2,6 @@
 use actix_ws::Session;
 
 #[derive(Clone)]
-// #[derive(Debug)]
 pub struct User {
     #[allow(dead_code)]
     pub id: String,
