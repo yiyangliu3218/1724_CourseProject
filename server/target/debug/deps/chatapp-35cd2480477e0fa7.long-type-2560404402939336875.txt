@@ -1,1 +1,0 @@
-fn({type error}, HttpRequest, actix_web::web::Data<Arc<AppState>>, actix_web::web::Json<(String, String)>) -> impl futures_util::Future<Output = HttpResponse> {auth_handler::login}

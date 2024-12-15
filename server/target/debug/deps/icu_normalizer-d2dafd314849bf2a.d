@@ -1,9 +1,0 @@
-D:\学习\MEng\Rust语言学习\pj学习\1724_CourseProject-master\1724_CourseProject-master\target\debug\deps\libicu_normalizer-d2dafd314849bf2a.rmeta: C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs
-
-D:\学习\MEng\Rust语言学习\pj学习\1724_CourseProject-master\1724_CourseProject-master\target\debug\deps\icu_normalizer-d2dafd314849bf2a.d: C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs
-
-C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs:
-C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs:
-C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs:
-C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs:
-C:\Users\a1782\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs:
