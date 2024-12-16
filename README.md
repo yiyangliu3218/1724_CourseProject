@@ -361,7 +361,7 @@ Follow these steps to set up, build, and run the chat application on Ubuntu Linu
 
 #### 1. Install System Dependencies
 
-**For Ubuntu**
+**For Ubuntu**\
 Install essential build tools and libraries:
 
 ```bash
@@ -369,7 +369,7 @@ Install essential build tools and libraries:
 > sudo apt install -y build-essential pkg-config libssl-dev curl
 ```
 
-**For macOS**
+**For macOS**\
 Ensure you have Homebrew installed. If not, install it using:
 
 ```bash
@@ -382,7 +382,7 @@ Then install OpenSSL:
 > brew install openssl
 ```
 
-**For Windows**
+**For Windows**\
 Ensure you have the Microsoft C++ Build Tools installed. You can install them via the Visual Studio Installer or download them directly from:
 <https://visualstudio.microsoft.com/visual-cpp-build-tools/>
 During installation, select the “Desktop development with C++” workload.
