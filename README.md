@@ -152,6 +152,7 @@ Key Technical Details:
 * **Direct Communication:** If the recipient is online, the server sends the message directly to the recipient’s session. If the recipient is offline, the sender will receive an error message.
 
 This feature enables direct communication between users in the same chat application, offering a more personal, private messaging experience.
+
 **Command:** `privatechat <user> <message>`
 
 #### 2. Message Broadcasting
@@ -165,6 +166,7 @@ Key Technical Details:
 * **Message Distribution:** The server then broadcasts the message to all users in the chat room by sending it through each user’s session. The message is relayed only to those who are currently online and connected to the chat room.
 
 This approach ensures that the message is broadcast in real-time to all participants within the room while verifying the sender’s membership to the chat room for proper message routing.
+
 **Command:** `sendmessage <room name> <message>`
 
 ### Presence Detection
@@ -242,7 +244,7 @@ This will connect the client to the WebSocket server at <ws://127.0.0.1:8081/cha
 > register <user_id> <password>
 ```
 
-Example: `register Alice 12345`
+Example: `register Alice 12345`\
 Success: `User Alice registered successfully.`
 
 * **Log in:**
@@ -251,7 +253,7 @@ Success: `User Alice registered successfully.`
 > login <user_id> <password>
 ```
 
-Example: `login Alice 12345`
+Example: `login Alice 12345`\
 Success: `User Alice logged in successfully.`
 
 * **Log out:**
@@ -270,7 +272,7 @@ Success: `User Alice logged out successfully.`
 > checkstatus <user_id>
 ```
 
-Example: `checkstatus Alice`
+Example: `checkstatus Alice`\
 Success: `User Alice is Online` or `User Alice is Offline.`
 
 #### 3. Private Messaging
@@ -281,7 +283,7 @@ Success: `User Alice is Online` or `User Alice is Offline.`
 > privatechat <recipient_user_id> <message>
 ```
 
-Example: `privatechat Tom Hello, Tom!`
+Example: `privatechat Tom Hello, Tom!`\
 Note: Make sure that user Tom has registered and logged in in another client terminal.
 
 #### 4. Chatroom Management
@@ -292,8 +294,8 @@ Note: Make sure that user Tom has registered and logged in in another client ter
 > createchatroom <room_id> <max_capacity>
 ```
 
-Example: `createchatroom room1 3`
-Success: `Chatroom room1 created with capacity 3! User Alice joined chatroom room1!`
+Example: `createchatroom room1 3`\
+Success: `Chatroom room1 created with capacity 3! User Alice joined chatroom room1!`\
 Note: Users must log in before creating a chat room; Users automatically join the chat room they created.
 
 * **Join a chat room:**
@@ -302,8 +304,8 @@ Note: Users must log in before creating a chat room; Users automatically join th
 > joinchatroom <room_id>
 ```
 
-Example: `joinchatroom room1`
-Success: `User Tom joined chatroom room1!`
+Example: `joinchatroom room1`\
+Success: `User Tom joined chatroom room1!`\
 Note: Users must log in before joining a chat room.
 
 * **Leave a chat room:**
@@ -312,7 +314,7 @@ Note: Users must log in before joining a chat room.
 > leavechatroom <room_id>
 ```
 
-Example: `leavechatroom room1`
+Example: `leavechatroom room1`\
 Success: `User Tom left chatroom room1!`
 
 * **List available chat rooms:**
@@ -321,7 +323,7 @@ Success: `User Tom left chatroom room1!`
 > listchatroom
 ```
 
-Response: `Available chatrooms: room1`
+Response: `Available chatrooms: room1`\
 Note: Users must log in before asking for the chat room list.
 
 * **List Users in a Chatroom:**
@@ -330,7 +332,7 @@ Note: Users must log in before asking for the chat room list.
 > listusers <room_id>
 ```
 
-Example: `listusers room1`
+Example: `listusers room1`\
 Success: `Users in the chatroom room1: Alice, Tom`
 
 #### 5. Broadcast Messaging
@@ -506,18 +508,19 @@ This will connect client to the server at <ws://127.0.0.1:8081/chat>.
 
 #### Available Commands
 
-`register <use_id> <password>` : Register a new user account
-`login <use_id> <password>` : Log into the user account
-`logout`: Exit the user account
-`checkstatus <user_id>` : Presence detection to show the online\offline status with the given user id
-`createchatroom <room_id> <room capacity>` : Create a new char room with specific capacity and join it
-`joinchatroom <room_id>` : Join the chatroom with the given room id
-`leavechatroom <room_id>` : Leave the chatroom with the given room id
-`listchatroom <room_id>` : List the ids of all chatrooms the user is currently in
-`listusers <room_id>` : List all the users in the chatroom with the given room id.
-`privatechat <recipient_user_id> <message>` : Send a message to the user with the given user id.
-`sendmessage <room_id> <message>` : Send a message to the chatroom with the given room id.
-`quit` : Close the connection and quit the client.
+`register <use_id> <password>` : Register a new user account\
+`login <use_id> <password>` : Log into the user account\
+`logout`: Exit the user account\
+`checkstatus <user_id>` : Presence detection to show the online\offline status with the given user id\
+`createchatroom <room_id> <room capacity>` : Create a new char room with specific capacity and join it\
+`joinchatroom <room_id>` : Join the chatroom with the given room id\
+`leavechatroom <room_id>` : Leave the chatroom with the given room id\
+`listchatroom <room_id>` : List the ids of all chatrooms the user is currently in\
+`listusers <room_id>` : List all the users in the chatroom with the given room id\
+`privatechat <recipient_user_id> <message>` : Send a message to the user with the given user id\
+`sendmessage <room_id> <message>` : Send a message to the chatroom with the given room id\
+`quit` : Close the connection and quit the client
+
 For detailed examples and explanations, refer to the **User's Guide**.
 
 ### Troubleshooting
