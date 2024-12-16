@@ -1,7 +1,7 @@
 # ECE1724 Project: Real-Time Chat Application
 
-Chujing Yu, 1010809608, <chujing.yu@mail.utoronto.ca>
-Minghao Ma, 1011818428, <minghao.ma@mail.utoronto.ca>
+Chujing Yu, 1010809608, <chujing.yu@mail.utoronto.ca>\
+Minghao Ma, 1011818428, <minghao.ma@mail.utoronto.ca>\
 Yiyang Liu, 1011770512, <yyoung.liu@mail.utoronto.ca>
 
 ## Video Demo
